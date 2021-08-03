@@ -58,24 +58,33 @@ main() {
 
     uc_section "text default"
     uc_row "\u00A9 " "Text" "copyright symbol" # add a space because it's meant to be Narrow-width
+    uc_row "\u26A0 " "Text" "construction symbol" # add a space because it's meant to be Narrow-width
 
     uc_section "emoji default - simple codepoints"
     uc_row "\U0001F600" "Emoji" "standard smiling face"
     uc_row "\U0001F926" "Emoji" "facepalm"
 
-    uc_section "text default override to emoji"
-    uc_row "\u00A9\uFE0F" "Emoji" "copyright emoji"
-
-    uc_section "emoji presentation modifier"
-    uc_row "\U0001F600\UFE0E" "Text" "smiling face; should occupy 2 cells"
-    uc_row "\U0001F441\UFE0F" "Emoji" "eye"
-    uc_row "\U0001F5E8\UFE0F" "Emoji" "speech bubble"
-    uc_row "\U0001F926\U0001F3FC" "Emoji" "facepalm with fitzpatrick type-3 modifier"
-
     uc_section "ZWH - zero width joining characters"
     uc_row "\U0001F441\UFE0F\U200D\U0001F5E8\UFE0F" "Emoji" "Eye with speech bubble"
     uc_row "\U0001F926\U0001F3FC\u200D\u2642\uFE0F" "Emoji" "facepalm with fitzpatrick type-3, male sign"
     uc_row "\U0001F468\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466" "Emoji" "family"
+
+    uc_section "VS16: text default override to emoji"
+    uc_row "\u00A9\uFE0F" "Emoji" "copyright emoji"
+    uc_row "\u26A0\uFE0F" "Text" "construction emoji" # add a space because it's meant to be Narrow-width
+    uc_row "\U0001F441\UFE0F" "Emoji" "eye"
+    uc_row "\U0001F5E8\UFE0F" "Emoji" "speech bubble"
+    uc_row "\U0001F926\U0001F3FC" "Emoji" "facepalm with fitzpatrick type-3 modifier"
+
+    uc_section "VS15: emoji default override to text"
+    uc_row "\U0001F600\uFE0E" "Text" "standard smiling face"
+    uc_row "\U0001F602\uFE0E" "Text" "another face"
+
+	uc_section "Flag Sequences"
+	uc_row "\U0001F1FA\U1F1F8" "Emoji" "USA flag"
 }
 
 main
+COL="\033[41m"
+RST="\033[m"
+#echo -ne "${COL}|\U0001F926\U0001F3FC\u200D\u2642\uFE0F${RST}\n"
