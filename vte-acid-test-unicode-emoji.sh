@@ -82,6 +82,7 @@ main() {
 
 	uc_section "Flag Sequences"
 	uc_row "\U0001F1FA\U1F1F8" "Emoji" "USA flag"
+    uc_row $'\U0001F3F4\U000E0067\U000E0062\U000E0065\U000E006E\U000E0067\U000E007F' "Emoji" "England"
 }
 
 main
