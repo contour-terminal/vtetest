@@ -37,6 +37,7 @@ maybe a screenshot how the output should ideally look like.
 - terminology
 - terminator
 - termite
+- wezterm
 - windows terminal (Windows)
 - xterm
 - xterm.js (such as Hyper)
