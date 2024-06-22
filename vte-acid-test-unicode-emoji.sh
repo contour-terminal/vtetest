@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env zsh
 # This file is part of the "libterminal" project
 #   Copyright (c) 2019-2020 Christian Parpart <christian@parpart.family>
 #
@@ -24,7 +24,7 @@ function sgr_line() {
 
 uc_title() {
     sgr_line 41 1
-    echo -ne "     $(sgr 21)${1}$(sgr 0)\n"
+    printf -ne "     $(sgr 21)${1}$(sgr 0)\n"
 }
 
 uc_heading() {
