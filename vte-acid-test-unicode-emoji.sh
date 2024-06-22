@@ -53,7 +53,7 @@ uc_row() {
 
 main() {
     clear
-    uc_title "VTE Unicode Acid Test"
+    # uc_title "VTE Unicode Acid Test"
     uc_heading "AB" "P.style" "Comment"
 
     uc_section "text default"
