@@ -34,7 +34,7 @@ uc_heading() {
 
 uc_section() {
     sgr_line 44 1 4
-    printf "|  | (${1})"
+    printf "│  │ (${1})"
     sgr 0
     printf "\n"
 }
@@ -47,7 +47,7 @@ uc_row() {
     local codepoints="$(printf "${1}")"
     local presentation_style="${2}"
     local comment="${3}"
-    printf "|${1}| %7s | %s\n" "${presentation_style}" "${comment}"
+    printf "│${1}│ %7s │ %s\n" "${presentation_style}" "${comment}"
 }
 # }}}
 
